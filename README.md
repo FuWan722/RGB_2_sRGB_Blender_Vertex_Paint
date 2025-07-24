@@ -5,14 +5,17 @@ This addon simply add a tab which let us convert the color we want in RGB to the
 
 ## Formula
 
-linear RGB --> sRGB
+### linear RGB --> sRGB
+```
 If RGB ≤ 0.0031308:
     sRGB = 12.92 * RGB
 Else:
     sRGB = 1.055 * (RGB)^(1/2.4) - 0.055
-
-sRGB --> linear RGB
+```
+### sRGB --> linear RGB
+```
 If sRGB ≤ 0.04045:
     RGB = sRGB / 12.92
 Else:
     RGB = ((sRGB + 0.055) / 1.055) ^ 2.4
+```
